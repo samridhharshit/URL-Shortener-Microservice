@@ -58,7 +58,7 @@ MongoClient.connect("mongodb://localhost:27017/shorturl",{ useNewUrlParser: true
             //if it does not match something in the database redirect to corresponding long url
             if(data.length ==0){return console.log("there is no url matching this one in the database")}
             var l=data[0].longUrl;
-            if(l.indexOf("https")==-1){l="https://"+1}
+            if(l.indexOf("https")==-l){l="https://"+1}
             res.redirect(l);
         })//end coolection find to array
     });
